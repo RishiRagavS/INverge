@@ -1,0 +1,23 @@
+-- DANGER: deletes ALL data. Used by `npm run db:reset`.
+DROP TABLE IF EXISTS resources;
+DROP TABLE IF EXISTS answers;
+DROP TABLE IF EXISTS questions;
+DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS bookings;
+DROP TABLE IF EXISTS mentor_slots;
+DROP TABLE IF EXISTS notifications;
+DROP TABLE IF EXISTS messages;
+DROP TABLE IF EXISTS profile_views;
+DROP TABLE IF EXISTS skips;
+DROP TABLE IF EXISTS saved_profiles;
+DROP TABLE IF EXISTS connections;
+DROP TABLE IF EXISTS comments;
+DROP TABLE IF EXISTS post_shares;
+DROP TABLE IF EXISTS post_saves;
+DROP TABLE IF EXISTS post_reactions;
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS documents;
+DROP TABLE IF EXISTS files;
+DROP TABLE IF EXISTS otps;
+DROP TABLE IF EXISTS sessions;
+DROP TABLE IF EXISTS users;

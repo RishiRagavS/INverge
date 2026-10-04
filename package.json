@@ -1,0 +1,24 @@
+{
+  "name": "inverge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "INverge — a trust-first professional network for founders, investors and mentors. Cloudflare Workers + D1.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create inverge-db",
+    "db:init:local": "wrangler d1 execute inverge-db --local --file=schema.sql",
+    "db:init": "wrangler d1 execute inverge-db --remote --file=schema.sql",
+    "db:seed:local": "wrangler d1 execute inverge-db --local --file=seed.sql",
+    "db:seed": "wrangler d1 execute inverge-db --remote --file=seed.sql",
+    "db:reset": "wrangler d1 execute inverge-db --remote --file=reset.sql && npm run db:init && npm run db:seed",
+    "seed:build": "node scripts/make-seed.mjs",
+    "preview": "node --no-warnings scripts/preview.mjs",
+    "test": "node --no-warnings test/e2e.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "engines": { "node": ">=20" }
+}

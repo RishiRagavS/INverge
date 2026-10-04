@@ -1,0 +1,4 @@
+# Copy to .dev.vars for `npm run dev` (local only; never commit .dev.vars)
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxx
+ADMIN_EMAILS=you@example.com
+ALLOW_DEMO_ADMIN=true   # local dev only: lets ADMIN_EMAILS work without an email provider. NEVER set in production.

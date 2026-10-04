@@ -1,0 +1,21 @@
+# INverge — Cloudflare Worker + static assets + D1. Runs entirely on Cloudflare's FREE plan (no R2, no card required).
+name = "inverge"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# Static frontend (public/) is served by Cloudflare's asset layer; unmatched paths and /api/* reach the Worker.
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "inverge-db"
+database_id = "b3dfab3c-2588-4255-aaf7-b4040a8896a7"   # printed by: npm run db:create
+
+[vars]
+EMAIL_FROM = "INverge <onboarding@resend.dev>"   # change to e.g. "INverge <no-reply@yourdomain.com>" once your domain is verified in Resend
+ADMIN_EMAILS = ""                                # comma-separated emails that can open /#/admin (set to YOUR email)
+PBKDF2_ITERATIONS = "15000"                      # tuned for the free plan's ~10ms CPU limit; raise on a paid plan
+
+# Secret (never put in this file):  npx wrangler secret put RESEND_API_KEY
