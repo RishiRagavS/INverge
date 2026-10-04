@@ -52,7 +52,7 @@ Founders, investors and mentors find each other through noisy, general-purpose n
 Requires **Node.js 22.5+**.
 
 ```bash
-git clone https://github.com/<your-username>/inverge.git
+git clone https://github.com/RishiRagavS/INverge.git
 cd inverge
 npm run seed:build     # creates seed.sql and a random demo password in demo-password.txt
 npm run preview        # http://localhost:8788
@@ -99,8 +99,8 @@ Starter **Terms of Use** and **Privacy Notice** live at `/#/terms` and `/#/priva
 
 ## Credits
 
-Concept, product design and direction: **Rishi**. Implementation built with AI assistance (Anthropic's Claude). Fonts: Inter and JetBrains Mono (SIL Open Font License).
+Concept, product design and direction: **Rishi Ragav Shanmuhanathan**. Implementation built with AI assistance (Anthropic's Claude). Fonts: Inter and JetBrains Mono (SIL Open Font License).
 
 ## License
 
-Copyright © 2026 Rishi. All rights reserved. Published for viewing and evaluation only; see [LICENSE](LICENSE).
+Copyright © 2026 RishiRagavS. All rights reserved. Published for viewing and evaluation only; see [LICENSE](LICENSE).
